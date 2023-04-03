@@ -19,6 +19,9 @@ process GTF2BED {
 
     script: // This script is bundled with the pipeline, in nf-core/rnaseq/bin/
     """
+    module load gcc/6.2.0
+    module load perl/5.30.0
+    
     gtf2bed \\
         $gtf \\
         > ${gtf.baseName}.bed
