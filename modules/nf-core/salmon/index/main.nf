@@ -31,6 +31,8 @@ process SALMON_INDEX {
     sed -i.bak -e 's/>//g' decoys.txt
     cat $transcript_fasta $genome_fasta > $gentrome
 
+    module load salmon/1.8.0
+
     salmon \\
         index \\
         --threads $task.cpus \\
