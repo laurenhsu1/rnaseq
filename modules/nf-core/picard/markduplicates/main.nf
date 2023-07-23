@@ -31,6 +31,7 @@ process PICARD_MARKDUPLICATES {
         avail_mem = (task.memory.mega*0.8).intValue()
     }
     """
+    module load java/jdk-17.0.7
     picard \\
         -Xmx${avail_mem}M \\
         MarkDuplicates \\
