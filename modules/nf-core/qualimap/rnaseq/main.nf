@@ -33,6 +33,10 @@ process QUALIMAP_RNASEQ {
     """
     unset DISPLAY
     mkdir -p tmp
+
+    module load java/jdk-1.8u112
+    module load qualimap/2.2.1
+
     export _JAVA_OPTIONS=-Djava.io.tmpdir=./tmp
     qualimap \\
         --java-mem-size=$memory \\
